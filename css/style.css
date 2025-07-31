@@ -1,4 +1,6 @@
-/* Reset */
+/* -------------------------
+   RESET + BASE
+------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -7,265 +9,280 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  transition: background 0.3s, color 0.3s;
+  background: #0d0d0d url('../images/textura-dark.jpg') repeat;
+  color: #f5f5f5;
+  line-height: 1.6;
 }
 
-body.dark {
-  background-color: #111;
-  color: #eee;
+h1, h2, h3 {
+  font-family: 'UnifrakturCook', cursive;
+  letter-spacing: 1px;
 }
 
-/* Header */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* -------------------------
+   HEADER
+------------------------- */
 header {
-  background: #1c1c1c;
-  color: white;
+  background: #111;
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 999;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.8);
 }
 
-header h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
+header .logo {
+  font-size: 1.8rem;
+  color: #ffb400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-nav {
+header nav {
   display: flex;
   gap: 20px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
+header nav a {
+  color: #fff;
+  font-weight: bold;
   transition: color 0.3s;
 }
 
-nav a:hover {
+header nav a:hover {
   color: #ffb400;
 }
 
 .menu-toggle {
   display: none;
-  font-size: 1.8em;
-  cursor: pointer;
-}
-
-.dark-mode-btn {
-  cursor: pointer;
-  font-size: 1.5rem;
-  margin-left: 15px;
-}
-
-/* Sections */
-.section {
-  padding: 100px 20px 50px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-h2 {
-  text-align: center;
   font-size: 2rem;
-  margin-bottom: 20px;
-  color: #222;
+  cursor: pointer;
 }
 
-body.dark h2 {
-  color: #ffb400;
-}
-
-/* Barber Pole animado */
-.barber-pole {
-  width: 60px;
-  height: 150px;
-  margin: 20px auto;
-  border: 5px solid #000;
-  border-radius: 30px;
-  overflow: hidden;
+/* -------------------------
+   HERO
+------------------------- */
+#hero {
+  padding-top: 100px;
+  height: 90vh;
+  background: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url('../images/barber.jpg') center/cover no-repeat;
+  text-align: center;
+  color: #fff;
   position: relative;
 }
 
-.barber-pole::before {
-  content: '';
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: repeating-linear-gradient(
-    45deg,
-    red 0,
-    red 20px,
-    white 20px,
-    white 40px,
-    blue 40px,
-    blue 60px
-  );
-  animation: move 4s linear infinite;
+#hero .hero-content {
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
 }
 
-@keyframes move {
-  from { transform: translateY(0); }
-  to { transform: translateY(-50%); }
+#hero h2 {
+  font-size: 3rem;
+  color: #ffb400;
+  margin-bottom: 20px;
 }
 
-/* Sobre */
-.sobre-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.btn-hero {
+  background: #ffb400;
+  color: #111;
+  padding: 14px 25px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn-hero:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* -------------------------
+   SEÇÃO SERVIÇOS
+------------------------- */
+#servicos {
+  padding: 80px 20px;
   text-align: center;
 }
 
-.sobre-container img {
-  width: 250px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+#servicos h2 {
+  font-size: 2.5rem;
+  color: #ffb400;
+  margin-bottom: 40px;
 }
 
-/* Galeria */
-.gallery {
+.servicos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
-.gallery img {
-  width: 100%;
+.card {
+  background: #1a1a1a;
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+  position: relative;
 }
 
-.gallery img:hover {
+.card i {
+  font-size: 2rem;
+  color: #ffb400;
+  margin-bottom: 15px;
+}
+
+.card:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  background: #262626;
 }
 
-/* Formulário */
-.form-section {
-  background: white;
-  padding: 25px;
+/* -------------------------
+   FORMULÁRIO DE AGENDAMENTO
+------------------------- */
+#agendamento {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#agendamento h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffb400;
+}
+
+form {
+  background: #1a1a1a;
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   max-width: 500px;
   margin: auto;
 }
 
-body.dark .form-section {
-  background: #222;
-  color: #fff;
-}
-
 label {
-  font-weight: 600;
-  margin-bottom: 8px;
   display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 select, input {
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
   border-radius: 8px;
+  border: none;
   font-size: 1rem;
 }
 
 button {
   width: 100%;
-  background: #1c1c1c;
-  color: white;
+  background: #ffb400;
+  color: #111;
   padding: 14px;
-  border: none;
-  border-radius: 8px;
   font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
 button:hover {
-  background: #ffb400;
-  color: #1c1c1c;
+  background: #fff;
 }
 
-/* Rodapé */
+/* -------------------------
+   MAPA
+------------------------- */
+#contato iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  margin-top: 20px;
+}
+
+/* -------------------------
+   FOOTER
+------------------------- */
 footer {
-  background: #1c1c1c;
-  color: white;
-  text-align: center;
+  background: #111;
   padding: 20px;
-  margin-top: 40px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.footer-icon {
+  width: 60px;
+  margin-bottom: 10px;
 }
 
 footer a {
   color: #ffb400;
-  text-decoration: none;
   margin: 0 10px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
-/* Botão voltar ao topo */
-.top-btn {
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
-  background: #ffb400;
-  color: #1c1c1c;
-  padding: 12px 14px;
-  border-radius: 50%;
-  font-size: 1.4rem;
-  cursor: pointer;
-  display: none;
+footer a:hover {
+  color: #fff;
 }
 
-/* WhatsApp Flutuante */
-.whatsapp-btn {
+/* -------------------------
+   BOTÕES FIXOS
+------------------------- */
+.whatsapp-btn, .call-btn {
   position: fixed;
   bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
+  background: #25D366;
+  color: #fff;
   border-radius: 50%;
   padding: 15px;
-  font-size: 1.8em;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  cursor: pointer;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
   z-index: 1000;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  nav {
+.whatsapp-btn { right: 20px; }
+.call-btn {
+  right: 90px;
+  background: #ffb400;
+  color: #111;
+}
+
+/* -------------------------
+   RESPONSIVIDADE
+------------------------- */
+@media(max-width: 768px) {
+  header nav {
     display: none;
     flex-direction: column;
-    background-color: #1c1c1c;
+    background: #111;
     position: absolute;
     top: 60px;
     right: 0;
     width: 200px;
-    padding: 10px;
+    padding: 20px;
   }
-
-  nav.active {
+  header nav.active {
     display: flex;
   }
-
   .menu-toggle {
     display: block;
   }
-
-  .sobre-container {
-    flex-direction: column;
-  }
 }
+

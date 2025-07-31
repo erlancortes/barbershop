@@ -3,99 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barbearia Erlan Cortes | Cortes e Estilo em Jequié</title>
+  <title>Barbearia Erlan Cortes | Estilo e Atitude</title>
 
   <!-- SEO -->
-  <meta name="description" content="Barbearia profissional em Jequié. Agende seu corte ou barba com Erlan Cortes. Qualidade, estilo e atendimento de excelência.">
-  <meta name="keywords" content="barbearia, cortes masculinos, barba, Jequié, Erlan Cortes, fade, navalhado">
+  <meta name="description" content="Barbearia profissional com cortes, barba e estilo em Jequié. Agende pelo WhatsApp agora.">
+  <meta name="keywords" content="barbearia, cortes, barba, estilo, Jequié, Erlan Cortes">
   <meta name="author" content="Erlan Cortes">
-  <link rel="icon" href="images/barber-icon.png" type="image/png">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
-    <h1>Erlan Cortes</h1>
-    <div>
-      <i class="fas fa-adjust dark-mode-btn" onclick="toggleDarkMode()"></i>
-      <span class="menu-toggle" onclick="toggleMenu()">☰</span>
-    </div>
+    <h1 class="logo"><i class="fas fa-skull"></i> Erlan Cortes</h1>
     <nav id="menu">
-      <a href="#sobre">Sobre</a>
-      <a href="#galeria">Galeria</a>
+      <a href="#hero">Início</a>
+      <a href="#servicos">Serviços</a>
       <a href="#agendamento">Agendamento</a>
+      <a href="#contato">Contato</a>
     </nav>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
   </header>
 
-  <main>
-    <!-- Sobre -->
-    <section id="sobre" class="section">
-      <h2>Sobre Mim</h2>
-      <div class="barber-pole"></div>
-      <div class="sobre-container">
-        <img src="images/barber.jpg" alt="Erlan Cortes" loading="lazy">
-        <p>Sou Erlan, barbeiro profissional apaixonado por estilo e cuidado masculino. Minha missão é entregar mais do que um corte, mas uma experiência única para cada cliente.</p>
-      </div>
-    </section>
-
-    <!-- Galeria -->
-    <section id="galeria" class="section">
-      <h2>Galeria</h2>
-      <div class="gallery">
-        <img src="images/corte1.jpg" alt="Corte 1" loading="lazy">
-        <img src="images/corte2.jpg" alt="Corte 2" loading="lazy">
-        <img src="images/corte3.jpg" alt="Corte 3" loading="lazy">
-        <img src="images/corte4.jpg" alt="Corte 4" loading="lazy">
-      </div>
-    </section>
-
-    <!-- Agendamento -->
-    <section id="agendamento" class="section form-section">
-      <h2>Agende seu horário</h2>
-      <form id="agendamentoForm">
-        <label for="servico">Serviço:</label>
-        <select id="servico" required>
-          <option value="">Selecione...</option>
-          <option value="Corte – R$ 35,00 (30min)">Corte – R$ 35,00 (30min)</option>
-          <option value="Barba – R$ 30,00 (30min)">Barba – R$ 30,00 (30min)</option>
-          <option value="Corte + Barba – R$ 50,00 (60min)">Corte + Barba – R$ 50,00 (60min)</option>
-        </select>
-
-        <label for="data">Dia:</label>
-        <input type="date" id="data" required>
-
-        <label for="hora">Horário:</label>
-        <input type="time" id="hora" required>
-
-        <label for="nome">Seu nome:</label>
-        <input type="text" id="nome" placeholder="Digite seu nome" required>
-
-        <button type="button" onclick="agendar()">Agendar pelo WhatsApp</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>Praça Gov. Juracy Magalhães, 6A - Jequiezinho, Jequié - BA</p>
-    <div>
-      <a href="https://instagram.com/erlancorts" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/5577991821749" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <h2>ESTILO, ATITUDE E PRECISÃO</h2>
+      <p>Seu visual merece respeito. Agende agora e viva a experiência barber.</p>
+      <a href="#agendamento" class="btn-hero">Agendar Agora</a>
     </div>
-    <p>&copy; 2025 Erlan Cortes | Todos os direitos reservados</p>
+    <div class="hero-bg">
+      <img src="images/caveira.png" alt="Caveira Barber">
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <h2><i class="fas fa-skull-crossbones"></i> Serviços</h2>
+    <div class="servicos-container">
+      <div class="card">
+        <i class="fas fa-cut"></i>
+        <h3>Corte Simples</h3>
+        <p>R$ 35,00 (30 min)</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-cut"></i>
+        <h3>Corte Degradê</h3>
+        <p>R$ 40,00 (35 min)</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-razor"></i>
+        <h3>Corte Navalhado</h3>
+        <p>R$ 45,00 (40 min)</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-beard"></i>
+        <h3>Barba</h3>
+        <p>R$ 30,00 (25 min)</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-gem"></i>
+        <h3>Pacote Premium</h3>
+        <p>R$ 80,00 (1h30)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENDAMENTO -->
+  <section id="agendamento">
+    <h2><i class="fas fa-calendar-alt"></i> Agendamento</h2>
+    <form id="agendamentoForm">
+      <label for="servico">Serviço:</label>
+      <select id="servico" required>
+        <option value="">Selecione...</option>
+        <option value="Corte Simples – R$ 35,00">Corte Simples – R$ 35,00</option>
+        <option value="Corte Degradê – R$ 40,00">Corte Degradê – R$ 40,00</option>
+        <option value="Corte Navalhado – R$ 45,00">Corte Navalhado – R$ 45,00</option>
+        <option value="Barba – R$ 30,00">Barba – R$ 30,00</option>
+        <option value="Sobrancelha – R$ 15,00">Sobrancelha – R$ 15,00</option>
+        <option value="Hidratação – R$ 25,00">Hidratação – R$ 25,00</option>
+        <option value="Pacote Premium – R$ 80,00">Pacote Premium – R$ 80,00</option>
+      </select>
+
+      <label for="data">Dia:</label>
+      <input type="date" id="data" required>
+
+      <label for="hora">Horário:</label>
+      <input type="time" id="hora" required>
+
+      <label for="nome">Seu nome:</label>
+      <input type="text" id="nome" required placeholder="Digite seu nome">
+
+      <button type="button" onclick="agendar()">Agendar pelo WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- MAPA -->
+  <section id="contato">
+    <h2><i class="fas fa-map-marker-alt"></i> Onde Estamos</h2>
+    <iframe src="https://www.google.com/maps/embed?..."></iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="images/caveira.png" alt="Caveira Barber" class="footer-icon">
+    <p>&copy; 2025 Barbearia Erlan Cortes | Todos os direitos reservados</p>
+    <a href="https://wa.me/5577991821749" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://instagram.com/erlancortes" target="_blank"><i class="fab fa-instagram"></i></a>
   </footer>
 
-  <!-- Botões -->
-  <div class="top-btn" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
-  <a href="https://wa.me/5577991821749" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://wa.me/5577991821749" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:+5577991821749" class="call-btn"><i class="fas fa-phone"></i></a>
 
-  <!-- JS -->
   <script src="js/script.js"></script>
 </body>
 </html>
+

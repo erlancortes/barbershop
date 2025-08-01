@@ -285,4 +285,14 @@ footer a:hover {
     display: block;
   }
 }
+.servico-img {
+  width: 100%;
+  height: auto;
+  max-height: 220px; /* ajuste conforme necessário */
+  object-fit: contain; /* ou "cover" se quiser preencher o espaço */
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: #000;
+}
+
 
